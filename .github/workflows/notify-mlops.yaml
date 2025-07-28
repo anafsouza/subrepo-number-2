@@ -1,0 +1,19 @@
+name: Notify mlops-prod
+
+on:
+  push:
+    branches: [main]  # ou outra branch que representa produção
+
+jobs:
+  notify-mlops:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger mlops-prod via repository_dispatch
+        env:
+          GH_TOKEN: ${{ secrets.MLOPS_PROD_TOKEN }}
+        run: |
+          curl -X POST \
+            -H "Authorization: token $GH_TOKEN" \
+            -H "Accept: application/vnd.github.everest-preview+json" \
+            https://api.github.com/repos/<teu-usuario>/mlops-prod/dispatches \
+            -d '{"event_type": "update-from-model-a"}'
