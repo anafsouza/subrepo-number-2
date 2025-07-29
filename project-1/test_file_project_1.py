@@ -1,5 +1,5 @@
 def fibbonacci_number(n):
-    """_Compute the nth Fibonacci number.
+    """Compute the nth Fibonacci number.
 
     Args:
         n: The position in the Fibonacci sequence.
