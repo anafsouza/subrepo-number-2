@@ -5,3 +5,4 @@ Testing git subtree and git submodule
 This project contains some tests...
 
 ## New changes
+Add more dummy functions
