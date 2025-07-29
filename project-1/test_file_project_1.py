@@ -7,6 +7,7 @@ def fibbonacci_number(n):
     Returns:
         The nth Fibonacci number.
     """
+    
     if n <= 0:
         return 0
     elif n == 1:
