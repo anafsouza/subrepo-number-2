@@ -13,4 +13,3 @@ def fibbonacci_number(n):
         return 1
     else:
         return fibbonacci_number(n - 1) + fibbonacci_number(n - 2)
-        
